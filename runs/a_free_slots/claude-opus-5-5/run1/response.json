@@ -1,0 +1,38 @@
+{
+  "model": "claude-opus-5-5",
+  "id": "msg_011Cgu9U3LsJtkZ2izKVQYXA",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "",
+      "signature": "CAQSoAsKEAgTGAI4AUIIdGhpbmtpbmcSDLfZWmz0Wa675U0w+RoMuoHq7A4AxKyTImlmIjACkMf46+DkyU9jD1eed25Tuw7YbfDvaWWg+blGXBf3TczHMRW1Jt5Po5Suo72IZeMqvQqP35bmWsD393hdpO7/NJBgr41uRAPawbWMpyYhNBoHkAJEUDmYzT+bTnoBUGZLcNwSmxJigsz2Sh10H4AysCfbA+dcxL5P9CDKfF+CEg/eveeUs61A3sJxM3t+keXDDhDdlDGfxFp5libuG+bfSc0bhYs1y4EMeg2pBUdovpRXhKPN29gV7tYncFptZYOXtN/7VE5KtodnOaNpmPc+KGubgp7hqUsVyYIbCOJL6DbY2TEIhf+VUvBZ6J31VJ7NVrbfAOjj3qFrv2tyJvlyw2xe5eFF15HRPYh3DQZ8KBAkgcmY7r+D1W4TrubDQ6rvOHPUy+neceP5oyTuXkyDOfs4Y7+xwp2slHTEgwdtqPmXk3bVLoWx/nCT28EONfGTpBl36IRZEagskQOtGvZUcIQWK8HF4/v0FXcAdlunOR7mAHbs43UNxppAvQ71TMoIj/AIcu0O2lxKtdwH0QO4IqE66ULZvNDATvzCdDoCXWx+WwwXl61KDJDv1PRh+/yLOQSMJk7rxT9OvLs9QKJ1bhwFz+Ax9je+7QMtkPh+juR53Bt6a4M+rEHyJmO9VitvBAuNViO73E3mqQWYbeVUwRWv6PiUlFgqVghfre4SHd//WSGU94OdoXTw/YAkCcRDy6j3KALL8Ikb7Fc087KZnl9OBwfkCOZgcAcIT04ibkTwaBcCIVTZZwBxU1IO1BBn0IQrIQDZbqUnDRCqt8SFvcMrBaPx9R6VNsvSkx/NArVBsUNNp0nKRVsHQhindbSHwSQXkEthQhNyfp57euy6Z6H3eodugDvyX+AacHYJBAIg7GSrH4/ZNk7nmTBthm3bMgUWsIDa0zrimE/xstOt0B7Tce619q7Ri/NFzWnnvpQKxOhDkuIRR4t7WlMl+Rj1d44QD5+5nCBjwZhYtAYAqQXbRAAaE1P/l8JKuaf2000eKgCxhxb91piHdLGmTTarbwhLrzNin7WU8IItJgIW67mO8rgwNBdHwFObG2FbZvHQ68I4etEZmME0D09c5ecPHz0bII0SjTaPLdgXdW3JyXCkccoPAFXydoOREayUiwwlj3UCbMTSS+JUNQZmMCTv+pebcs/dGys9dc3WtHQRGtQLK7HieVwVHZLBnQfRo97PhcgrQ/3Tp7HdOvK/h3YVvzkhdgaAVczhvY5eEe0d/pbk8eTAtkclzQLH2uSxCf5zPCQjbOcIK4gta/nacfLQgkZaDnnftbTnIbh5mRMHOlmkkInpl5gtH07WIhW5rMGuxGAbIt7SBCNWx+y5dRGKAg4748/Q8MZQ+/E4wZkceHgCj2N73WgXrnoGMi/HLkW1D5IcyF2LyFJpH6WfKnUHBTNeI7cYCi83ZGND5GDncHR483GIX2zx0eOLEhbHD6/e97T2ccTgn+zSU+7jasFJOFywDoTx2PCBC9wjBESLCv2P4dhPJEmWga07CGZfN9PhYXk1L1Siins7PZ91jfbNb2/mqnGP1zN+ryYu8ZrNk/8p5d89PnDMmZ6+0dpg29frqh2sMOij/jhRRjrqzQxXEgFkTzGSdfV1T9E14TWcq2Jj0WoB27I99zmniemMtyKhfUfMyF2/VLEaLOJKAwCew25kHzQsCK38oaQZCjQHKX9HZLBuLGLeWkO/5+GcfaZIQQeYw65OQASBsHDj9ggbrSBR7k5CUXLffZg1W5bwJEGkK47U9ZFk5oCTjoDISSBF/y/Qce0RjimjrC5VtRkVun7vfF7UGgijaf5PmSnvog197qgN9++n/Qyqcx4EG8yUsBBTNGyeV8NK0LcerBwYAQ=="
+    },
+    {
+      "type": "text",
+      "text": "```python\n# file: free_slots.py\n\"\"\"Compute free time windows within a working day, given busy intervals.\"\"\"\n\nfrom __future__ import annotations\n\n_DIGITS = frozenset(\"0123456789\")\n\n\ndef _parse_time(value) -> int:\n    \"\"\"Parse a strict \"HH:MM\" string into minutes since midnight.\n\n    Accepts \"00:00\" through \"23:59\", plus \"24:00\". Raises ValueError otherwise.\n    \"\"\"\n    if not isinstance(value, str):\n        raise ValueError(f\"time must be a string in 'HH:MM' format, got {value!r}\")\n    if (\n        len(value) != 5\n        or value[2] != \":\"\n        or value[0] not in _DIGITS\n        or value[1] not in _DIGITS\n        or value[3] not in _DIGITS\n        or value[4] not in _DIGITS\n    ):\n        raise ValueError(f\"invalid time format: {value!r}\")\n    hours = int(value[:2])\n    minutes = int(value[3:])\n    if hours == 24 and minutes == 0:\n        return 24 * 60\n    if not (0 <= hours <= 23) or not (0 <= minutes <= 59):\n        raise ValueError(f\"time out of range: {value!r}\")\n    return hours * 60 + minutes\n\n\ndef _format_time(total_minutes: int) -> str:\n    \"\"\"Format minutes since midnight as a zero-padded \"HH:MM\" string.\"\"\"\n    hours, minutes = divmod(total_minutes, 60)\n    return f\"{hours:02d}:{minutes:02d}\"\n\n\ndef free_slots(busy, day_start, day_end, min_minutes=0) -> list[tuple[str, str]]:\n    \"\"\"Return free windows within [day_start, day_end) not covered by busy intervals.\n\n    Args:\n        busy: Iterable of 2-item tuples/lists (start, end) of \"HH:MM\" strings,\n            each interpreted as the half-open interval [start, end).\n        day_start: Start of the working day (\"HH:MM\").\n        day_end: End of the working day (\"HH:MM\"; \"24:00\" allowed).\n        min_minutes: Minimum length (in minutes) of returned windows; must be a\n            non-negative integer.\n\n    Returns:\n        A list of (start, end) tuples of \"HH:MM\" strings, sorted by start.\n\n    Raises:\n        ValueError: On any invalid input as described in the specification.\n    \"\"\"\n    # Validate min_minutes.\n    if isinstance(min_minutes, bool) or not isinstance(min_minutes, int):\n        raise ValueError(f\"min_minutes must be a non-negative integer, got {min_minutes!r}\")\n    if min_minutes < 0:\n        raise ValueError(f\"min_minutes must be non-negative, got {min_minutes!r}\")\n\n    # Validate the day bounds.\n    start_of_day = _parse_time(day_start)\n    end_of_day = _parse_time(day_end)\n    if start_of_day >= end_of_day:\n        raise ValueError(\n            f\"day_start ({day_start!r}) must be strictly earlier than day_end ({day_end!r})\"\n        )\n\n    # Validate and parse busy intervals without mutating the input.\n    try:\n        items = list(busy)\n    except TypeError as exc:\n        raise ValueError(\"busy must be an iterable of (start, end) pairs\") from exc\n\n    clipped: list[tuple[int, int]] = []\n    for item in items:\n        if not isinstance(item, (tuple, list)) or len(item) != 2:\n            raise ValueError(f\"busy interval must be a 2-item tuple or list, got {item!r}\")\n        b_start = _parse_time(item[0])\n        b_end = _parse_time(item[1])\n        if b_start >= b_end:\n            raise ValueError(f\"busy interval start must be before end: {item!r}\")\n        # Clip to the working day; ignore if entirely outside.\n        s = max(b_start, start_of_day)\n        e = min(b_end, end_of_day)\n        if s < e:\n            clipped.append((s, e))\n\n    clipped.sort()\n\n    # Merge overlapping / touching intervals.\n    merged: list[list[int]] = []\n    for s, e in clipped:\n        if merged and s <= merged[-1][1]:\n            if e > merged[-1][1]:\n                merged[-1][1] = e\n        else:\n            merged.append([s, e])\n\n    # Collect gaps.\n    result: list[tuple[str, str]] = []\n    cursor = start_of_day\n    for s, e in merged:\n        if s > cursor:\n            length = s - cursor\n            if length > 0 and length >= min_minutes:\n                result.append((_format_time(cursor), _format_time(s)))\n        if e > cursor:\n            cursor = e\n    if end_of_day > cursor:\n        length = end_of_day - cursor\n        if length > 0 and length >= min_minutes:\n            result.append((_format_time(cursor), _format_time(end_of_day)))\n\n    return result\n```"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 740,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1983,
+    "output_tokens_details": {
+      "thinking_tokens": 336
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

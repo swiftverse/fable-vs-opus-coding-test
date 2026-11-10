@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CguA53RopzPgRo1xKmAN9",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"scores\":{\"a_free_slots:S1\":{\"spec_fidelity\":9,\"robustness\":9,\"readability\":9,\"maintainability\":9,\"overall\":9,\"note\":\"Regex fullmatch with [0-9] is strict and compact, and the sweep is correct, but the emit closure is slightly redundant.\"},\"a_free_slots:S2\":{\"spec_fidelity\":9,\"robustness\":9,\"readability\":8,\"maintainability\":8,\"overall\":8,\"note\":\"Correct and strict, but the long chained per-character digit check is verbose.\"},\"a_free_slots:S3\":{\"spec_fidelity\":9,\"robustness\":9,\"readability\":9,\"maintainability\":9,\"overall\":9,\"note\":\"Correct, with type hints, __all__, and a clear threshold of max(min_minutes, 1); an empty hh/mm is impossible because the length is checked first.\"},\"a_free_slots:S4\":{\"spec_fidelity\":9,\"robustness\":9,\"readability\":8,\"maintainability\":8,\"overall\":8,\"note\":\"Correct, but the extra merge pass is redundant with the sweep and the length > 0 checks are duplicated.\"},\"b_invoice_bugfix:S1\":{\"spec_fidelity\":9,\"robustness\":9,\"readability\":8,\"maintainability\":9,\"overall\":9,\"note\":\"Fixes all the bugs, validates coupons up front and again at use, and computes the total from the rounded parts so the invariant holds exactly.\"},\"b_invoice_bugfix:S2\":{\"spec_fidelity\":9,\"robustness\":9,\"readability\":9,\"maintainability\":9,\"overall\":9,\"note\":\"The fixes are the same as S1's and clean, with a shared coupon parser; Decimal accepts forms like '1e2' as coupons, which is slightly lenient.\"},\"b_invoice_bugfix:S3\":{\"spec_fidelity\":8,\"robustness\":8,\"readability\":8,\"maintainability\":7,\"overall\":8,\"note\":\"It rounds the subtotal before computing the coupon, so a percent coupon can differ by a cent from the spec's flow; coupon parsing is also duplicated between apply_coupon and _coupon_amount.\"},\"b_invoice_bugfix:S4\":{\"spec_fidelity\":9,\"robustness\":8,\"readability\":9,\"maintainability\":9,\"overall\":9,\"note\":\"Parses the coupon once into a tuple with strict regexes and the math is correct, but str(value) for tax_rate and unit_price is lenient, and a trailing newline slips through regex $.\"},\"c_ttl_cache:S1\":{\"spec_fidelity\":9,\"robustness\":9,\"readability\":9,\"maintainability\":9,\"overall\":9,\"note\":\"Counts expirations and misses correctly, and GET with a None value is nearly right; it does not distinguish a stored None from a miss in the CLI, which is harmless for string values.\"},\"c_ttl_cache:S2\":{\"spec_fidelity\":8,\"robustness\":8,\"readability\":9,\"maintainability\":9,\"overall\":8,\"note\":\"Clean _live_entry helper, but it has the same inf/nan ttl issue in the CLI and raises TypeError for a bad clock.\"},\"c_ttl_cache:S3\":{\"spec_fidelity\":8,\"robustness\":8,\"readability\":8,\"maintainability\":7,\"overall\":8,\"note\":\"It handles ttl overflow, but the clock is read separately in each method and delete removes before checking expiry; the clock is also not validated.\"},\"c_ttl_cache:S4\":{\"spec_fidelity\":9,\"robustness\":9,\"readability\":8,\"maintainability\":9,\"overall\":9,\"note\":\"Uses a sentinel for a miss and validates the CLI arguments with argparse types, but the _expire_if_needed name misleadingly returns liveness.\"}},\"per_task_best\":{\"a_free_slots\":\"a_free_slots:S3\",\"b_invoice_bugfix\":\"b_invoice_bugfix:S2\",\"c_ttl_cache\":\"c_ttl_cache:S4\"}}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 26209,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1345,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

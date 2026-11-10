@@ -1,0 +1,258 @@
+[
+  {
+    "task": "a_free_slots",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 1,
+    "passed": 29,
+    "total": 29,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 15.76,
+    "input_tokens": 740,
+    "output_tokens": 1705,
+    "thinking_tokens": 553,
+    "list_price_cost_units": 741.2,
+    "stop_reason": "end_turn",
+    "loc": 71,
+    "files": [
+      "free_slots.py"
+    ]
+  },
+  {
+    "task": "a_free_slots",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 2,
+    "passed": 29,
+    "total": 29,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 17.37,
+    "input_tokens": 740,
+    "output_tokens": 1740,
+    "thinking_tokens": 587,
+    "list_price_cost_units": 755.2,
+    "stop_reason": "end_turn",
+    "loc": 64,
+    "files": [
+      "free_slots.py"
+    ]
+  },
+  {
+    "task": "a_free_slots",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 1,
+    "passed": 29,
+    "total": 29,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 15.28,
+    "input_tokens": 740,
+    "output_tokens": 1983,
+    "thinking_tokens": 336,
+    "list_price_cost_units": 426.2,
+    "stop_reason": "end_turn",
+    "loc": 98,
+    "files": [
+      "free_slots.py"
+    ]
+  },
+  {
+    "task": "a_free_slots",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 2,
+    "passed": 29,
+    "total": 29,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 14.2,
+    "input_tokens": 740,
+    "output_tokens": 1846,
+    "thinking_tokens": 360,
+    "list_price_cost_units": 398.8,
+    "stop_reason": "end_turn",
+    "loc": 83,
+    "files": [
+      "free_slots.py"
+    ]
+  },
+  {
+    "task": "b_invoice_bugfix",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 1,
+    "passed": 25,
+    "total": 25,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 39.16,
+    "input_tokens": 1340,
+    "output_tokens": 4339,
+    "thinking_tokens": 1791,
+    "list_price_cost_units": 1842.8,
+    "stop_reason": "end_turn",
+    "loc": 103,
+    "files": [
+      "invoice.py"
+    ]
+  },
+  {
+    "task": "b_invoice_bugfix",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 2,
+    "passed": 25,
+    "total": 25,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 39.13,
+    "input_tokens": 1340,
+    "output_tokens": 4344,
+    "thinking_tokens": 1793,
+    "list_price_cost_units": 1844.8,
+    "stop_reason": "end_turn",
+    "loc": 105,
+    "files": [
+      "invoice.py"
+    ]
+  },
+  {
+    "task": "b_invoice_bugfix",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 1,
+    "passed": 25,
+    "total": 25,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 27.92,
+    "input_tokens": 1340,
+    "output_tokens": 3486,
+    "thinking_tokens": 1067,
+    "list_price_cost_units": 750.8,
+    "stop_reason": "end_turn",
+    "loc": 105,
+    "files": [
+      "invoice.py"
+    ]
+  },
+  {
+    "task": "b_invoice_bugfix",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 2,
+    "passed": 25,
+    "total": 25,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 29.34,
+    "input_tokens": 1340,
+    "output_tokens": 3594,
+    "thinking_tokens": 1329,
+    "list_price_cost_units": 772.4,
+    "stop_reason": "end_turn",
+    "loc": 103,
+    "files": [
+      "invoice.py"
+    ]
+  },
+  {
+    "task": "c_ttl_cache",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 1,
+    "passed": 27,
+    "total": 27,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 35.19,
+    "input_tokens": 1223,
+    "output_tokens": 3961,
+    "thinking_tokens": 1419,
+    "list_price_cost_units": 1682.24,
+    "stop_reason": "end_turn",
+    "loc": 174,
+    "files": [
+      "cache_cli.py",
+      "ttlcache.py"
+    ]
+  },
+  {
+    "task": "c_ttl_cache",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 2,
+    "passed": 27,
+    "total": 27,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 32.43,
+    "input_tokens": 1223,
+    "output_tokens": 3629,
+    "thinking_tokens": 1240,
+    "list_price_cost_units": 1549.44,
+    "stop_reason": "end_turn",
+    "loc": 160,
+    "files": [
+      "cache_cli.py",
+      "ttlcache.py"
+    ]
+  },
+  {
+    "task": "c_ttl_cache",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 1,
+    "passed": 27,
+    "total": 27,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 29.43,
+    "input_tokens": 1223,
+    "output_tokens": 3758,
+    "thinking_tokens": 850,
+    "list_price_cost_units": 800.52,
+    "stop_reason": "end_turn",
+    "loc": 216,
+    "files": [
+      "cache_cli.py",
+      "ttlcache.py"
+    ]
+  },
+  {
+    "task": "c_ttl_cache",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 2,
+    "passed": 27,
+    "total": 27,
+    "pass_rate": 1.0,
+    "all_passed": true,
+    "failed_tests": [],
+    "wall_s": 28.6,
+    "input_tokens": 1223,
+    "output_tokens": 3592,
+    "thinking_tokens": 1000,
+    "list_price_cost_units": 767.32,
+    "stop_reason": "end_turn",
+    "loc": 179,
+    "files": [
+      "cache_cli.py",
+      "ttlcache.py"
+    ]
+  }
+]

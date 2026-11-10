@@ -1,0 +1,38 @@
+{
+  "model": "claude-fable-5-2",
+  "id": "msg_011Cgu9StZVyCgjysQ7oNUWU",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "",
+      "signature": "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"
+    },
+    {
+      "type": "text",
+      "text": "```python\n# file: free_slots.py\n\"\"\"Compute free time windows in a working day given busy intervals.\"\"\"\n\n_DIGITS = frozenset(\"0123456789\")\n_END_OF_DAY = 24 * 60\n\n\ndef _parse(value) -> int:\n    \"\"\"Convert an 'HH:MM' string to minutes since midnight, validating strictly.\"\"\"\n    if not isinstance(value, str):\n        raise ValueError(f\"time must be a string in HH:MM format, got {value!r}\")\n    if (\n        len(value) != 5\n        or value[2] != \":\"\n        or value[0] not in _DIGITS\n        or value[1] not in _DIGITS\n        or value[3] not in _DIGITS\n        or value[4] not in _DIGITS\n    ):\n        raise ValueError(f\"invalid time format: {value!r}\")\n    hours = int(value[:2])\n    minutes = int(value[3:])\n    if hours == 24 and minutes == 0:\n        return _END_OF_DAY\n    if hours > 23 or minutes > 59:\n        raise ValueError(f\"time out of range: {value!r}\")\n    return hours * 60 + minutes\n\n\ndef _format(total: int) -> str:\n    \"\"\"Convert minutes since midnight to a zero-padded 'HH:MM' string.\"\"\"\n    return f\"{total // 60:02d}:{total % 60:02d}\"\n\n\ndef free_slots(busy, day_start, day_end, min_minutes=0) -> list[tuple[str, str]]:\n    \"\"\"Return the free windows in [day_start, day_end) not covered by `busy`.\n\n    Only windows of positive length that last at least `min_minutes` minutes\n    are returned, sorted by start time.\n    \"\"\"\n    if isinstance(min_minutes, bool) or not isinstance(min_minutes, int):\n        raise ValueError(\"min_minutes must be a non-negative integer\")\n    if min_minutes < 0:\n        raise ValueError(\"min_minutes must be non-negative\")\n\n    start_of_day = _parse(day_start)\n    end_of_day = _parse(day_end)\n    if start_of_day >= end_of_day:\n        raise ValueError(\"day_start must be strictly earlier than day_end\")\n\n    try:\n        iterator = iter(busy)\n    except TypeError:\n        raise ValueError(\"busy must be an iterable of (start, end) pairs\") from None\n\n    clipped: list[tuple[int, int]] = []\n    for item in iterator:\n        if not isinstance(item, (tuple, list)) or len(item) != 2:\n            raise ValueError(f\"busy interval must be a 2-item tuple or list: {item!r}\")\n        start = _parse(item[0])\n        end = _parse(item[1])\n        if start >= end:\n            raise ValueError(f\"busy interval start must be before end: {item!r}\")\n        # Clip to the working day; drop intervals entirely outside it.\n        start = max(start, start_of_day)\n        end = min(end, end_of_day)\n        if start < end:\n            clipped.append((start, end))\n\n    clipped.sort()\n\n    result: list[tuple[str, str]] = []\n\n    def emit(a: int, b: int) -> None:\n        length = b - a\n        if length > 0 and length >= min_minutes:\n            result.append((_format(a), _format(b)))\n\n    cursor = start_of_day\n    for start, end in clipped:\n        if start > cursor:\n            emit(cursor, start)\n        if end > cursor:\n            cursor = end\n    emit(cursor, end_of_day)\n\n    return result\n```"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 740,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1705,
+    "output_tokens_details": {
+      "thinking_tokens": 553
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

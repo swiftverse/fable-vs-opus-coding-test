@@ -1,0 +1,190 @@
+[
+  {
+    "passed": 1,
+    "total": 4,
+    "failed": [
+      "test_non_ascii_digits_rejected[\\u0660\\u0669:\\u0660\\u0660]",
+      "test_non_ascii_digits_rejected[\\uff10\\uff19:00]",
+      "test_non_ascii_digits_rejected[09:0\\u0660]"
+    ],
+    "timings_s": {
+      "test_large_input_speed": 0.1483
+    },
+    "task": "a_free_slots",
+    "model": "reference",
+    "label": "Reference",
+    "run": 0
+  },
+  {
+    "passed": 4,
+    "total": 4,
+    "failed": [],
+    "timings_s": {
+      "test_large_input_speed": 0.1259
+    },
+    "task": "a_free_slots",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 1
+  },
+  {
+    "passed": 4,
+    "total": 4,
+    "failed": [],
+    "timings_s": {
+      "test_large_input_speed": 0.1403
+    },
+    "task": "a_free_slots",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 2
+  },
+  {
+    "passed": 4,
+    "total": 4,
+    "failed": [],
+    "timings_s": {
+      "test_large_input_speed": 0.2266
+    },
+    "task": "a_free_slots",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 1
+  },
+  {
+    "passed": 4,
+    "total": 4,
+    "failed": [],
+    "timings_s": {
+      "test_large_input_speed": 0.1536
+    },
+    "task": "a_free_slots",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 2
+  },
+  {
+    "passed": 8,
+    "total": 11,
+    "failed": [
+      "test_bad_prices_raise_value_error[abc]",
+      "test_bad_prices_raise_value_error[NaN]",
+      "test_bad_prices_raise_value_error[Infinity]"
+    ],
+    "timings_s": {},
+    "task": "b_invoice_bugfix",
+    "model": "reference",
+    "label": "Reference",
+    "run": 0
+  },
+  {
+    "passed": 11,
+    "total": 11,
+    "failed": [],
+    "timings_s": {},
+    "task": "b_invoice_bugfix",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 1
+  },
+  {
+    "passed": 11,
+    "total": 11,
+    "failed": [],
+    "timings_s": {},
+    "task": "b_invoice_bugfix",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 2
+  },
+  {
+    "passed": 11,
+    "total": 11,
+    "failed": [],
+    "timings_s": {},
+    "task": "b_invoice_bugfix",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 1
+  },
+  {
+    "passed": 11,
+    "total": 11,
+    "failed": [],
+    "timings_s": {},
+    "task": "b_invoice_bugfix",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 2
+  },
+  {
+    "passed": 5,
+    "total": 5,
+    "failed": [],
+    "timings_s": {
+      "test_full_cache_insert_speed": 10.9373,
+      "test_mixed_ops_throughput": 4.6622,
+      "test_cli_throughput": 0.2675
+    },
+    "task": "c_ttl_cache",
+    "model": "reference",
+    "label": "Reference",
+    "run": 0
+  },
+  {
+    "passed": 5,
+    "total": 5,
+    "failed": [],
+    "timings_s": {
+      "test_full_cache_insert_speed": 14.5646,
+      "test_mixed_ops_throughput": 4.7309,
+      "test_cli_throughput": 0.2394
+    },
+    "task": "c_ttl_cache",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 1
+  },
+  {
+    "passed": 5,
+    "total": 5,
+    "failed": [],
+    "timings_s": {
+      "test_full_cache_insert_speed": 8.4433,
+      "test_mixed_ops_throughput": 4.383,
+      "test_cli_throughput": 0.2743
+    },
+    "task": "c_ttl_cache",
+    "model": "claude-fable-5-2",
+    "label": "Fable 5.2",
+    "run": 2
+  },
+  {
+    "passed": 5,
+    "total": 5,
+    "failed": [],
+    "timings_s": {
+      "test_full_cache_insert_speed": 8.6913,
+      "test_mixed_ops_throughput": 4.5006,
+      "test_cli_throughput": 0.244
+    },
+    "task": "c_ttl_cache",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 1
+  },
+  {
+    "passed": 5,
+    "total": 5,
+    "failed": [],
+    "timings_s": {
+      "test_full_cache_insert_speed": 11.7453,
+      "test_mixed_ops_throughput": 4.0495,
+      "test_cli_throughput": 0.2994
+    },
+    "task": "c_ttl_cache",
+    "model": "claude-opus-5-5",
+    "label": "Opus 5.5",
+    "run": 2
+  }
+]

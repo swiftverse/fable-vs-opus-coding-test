@@ -1,0 +1,186 @@
+{
+  "judge_model": "claude-sonnet-5-5",
+  "is_llm_opinion": true,
+  "mean_scores_by_model": {
+    "Fable 5.2": {
+      "spec_fidelity": 8.67,
+      "robustness": 8.67,
+      "readability": 8.5,
+      "maintainability": 8.5,
+      "overall": 8.5
+    },
+    "Opus 5.5": {
+      "spec_fidelity": 8.83,
+      "robustness": 8.67,
+      "readability": 8.5,
+      "maintainability": 8.5,
+      "overall": 8.67
+    }
+  },
+  "per_task_best": {
+    "a_free_slots": {
+      "solution": "a_free_slots:S3",
+      "model": "claude-opus-5-5",
+      "run": 2
+    },
+    "b_invoice_bugfix": {
+      "solution": "b_invoice_bugfix:S2",
+      "model": "claude-fable-5-2",
+      "run": 2
+    },
+    "c_ttl_cache": {
+      "solution": "c_ttl_cache:S4",
+      "model": "claude-opus-5-5",
+      "run": 1
+    }
+  },
+  "raw_scores": {
+    "a_free_slots:S1": {
+      "spec_fidelity": 9,
+      "robustness": 9,
+      "readability": 9,
+      "maintainability": 9,
+      "overall": 9,
+      "note": "Regex fullmatch with [0-9] is strict and compact, and the sweep is correct, but the emit closure is slightly redundant."
+    },
+    "a_free_slots:S2": {
+      "spec_fidelity": 9,
+      "robustness": 9,
+      "readability": 8,
+      "maintainability": 8,
+      "overall": 8,
+      "note": "Correct and strict, but the long chained per-character digit check is verbose."
+    },
+    "a_free_slots:S3": {
+      "spec_fidelity": 9,
+      "robustness": 9,
+      "readability": 9,
+      "maintainability": 9,
+      "overall": 9,
+      "note": "Correct, with type hints, __all__, and a clear threshold of max(min_minutes, 1); an empty hh/mm is impossible because the length is checked first."
+    },
+    "a_free_slots:S4": {
+      "spec_fidelity": 9,
+      "robustness": 9,
+      "readability": 8,
+      "maintainability": 8,
+      "overall": 8,
+      "note": "Correct, but the extra merge pass is redundant with the sweep and the length > 0 checks are duplicated."
+    },
+    "b_invoice_bugfix:S1": {
+      "spec_fidelity": 9,
+      "robustness": 9,
+      "readability": 8,
+      "maintainability": 9,
+      "overall": 9,
+      "note": "Fixes all the bugs, validates coupons up front and again at use, and computes the total from the rounded parts so the invariant holds exactly."
+    },
+    "b_invoice_bugfix:S2": {
+      "spec_fidelity": 9,
+      "robustness": 9,
+      "readability": 9,
+      "maintainability": 9,
+      "overall": 9,
+      "note": "The fixes are the same as S1's and clean, with a shared coupon parser; Decimal accepts forms like '1e2' as coupons, which is slightly lenient."
+    },
+    "b_invoice_bugfix:S3": {
+      "spec_fidelity": 8,
+      "robustness": 8,
+      "readability": 8,
+      "maintainability": 7,
+      "overall": 8,
+      "note": "It rounds the subtotal before computing the coupon, so a percent coupon can differ by a cent from the spec's flow; coupon parsing is also duplicated between apply_coupon and _coupon_amount."
+    },
+    "b_invoice_bugfix:S4": {
+      "spec_fidelity": 9,
+      "robustness": 8,
+      "readability": 9,
+      "maintainability": 9,
+      "overall": 9,
+      "note": "Parses the coupon once into a tuple with strict regexes and the math is correct, but str(value) for tax_rate and unit_price is lenient, and a trailing newline slips through regex $."
+    },
+    "c_ttl_cache:S1": {
+      "spec_fidelity": 9,
+      "robustness": 9,
+      "readability": 9,
+      "maintainability": 9,
+      "overall": 9,
+      "note": "Counts expirations and misses correctly, and GET with a None value is nearly right; it does not distinguish a stored None from a miss in the CLI, which is harmless for string values."
+    },
+    "c_ttl_cache:S2": {
+      "spec_fidelity": 8,
+      "robustness": 8,
+      "readability": 9,
+      "maintainability": 9,
+      "overall": 8,
+      "note": "Clean _live_entry helper, but it has the same inf/nan ttl issue in the CLI and raises TypeError for a bad clock."
+    },
+    "c_ttl_cache:S3": {
+      "spec_fidelity": 8,
+      "robustness": 8,
+      "readability": 8,
+      "maintainability": 7,
+      "overall": 8,
+      "note": "It handles ttl overflow, but the clock is read separately in each method and delete removes before checking expiry; the clock is also not validated."
+    },
+    "c_ttl_cache:S4": {
+      "spec_fidelity": 9,
+      "robustness": 9,
+      "readability": 8,
+      "maintainability": 9,
+      "overall": 9,
+      "note": "Uses a sentinel for a miss and validates the CLI arguments with argparse types, but the _expire_if_needed name misleadingly returns liveness."
+    }
+  },
+  "mapping": {
+    "a_free_slots:S1": {
+      "model": "claude-fable-5-2",
+      "run": 2
+    },
+    "a_free_slots:S2": {
+      "model": "claude-fable-5-2",
+      "run": 1
+    },
+    "a_free_slots:S3": {
+      "model": "claude-opus-5-5",
+      "run": 2
+    },
+    "a_free_slots:S4": {
+      "model": "claude-opus-5-5",
+      "run": 1
+    },
+    "b_invoice_bugfix:S1": {
+      "model": "claude-fable-5-2",
+      "run": 1
+    },
+    "b_invoice_bugfix:S2": {
+      "model": "claude-fable-5-2",
+      "run": 2
+    },
+    "b_invoice_bugfix:S3": {
+      "model": "claude-opus-5-5",
+      "run": 1
+    },
+    "b_invoice_bugfix:S4": {
+      "model": "claude-opus-5-5",
+      "run": 2
+    },
+    "c_ttl_cache:S1": {
+      "model": "claude-opus-5-5",
+      "run": 2
+    },
+    "c_ttl_cache:S2": {
+      "model": "claude-fable-5-2",
+      "run": 2
+    },
+    "c_ttl_cache:S3": {
+      "model": "claude-fable-5-2",
+      "run": 1
+    },
+    "c_ttl_cache:S4": {
+      "model": "claude-opus-5-5",
+      "run": 1
+    }
+  },
+  "summary_md": "| Model | Spec fidelity | Robustness | Readability | Maintainability | Overall |\n|---|---|---|---|---|---|\n| Fable 5.2 | 8.67 | 8.67 | 8.5 | 8.5 | 8.5 |\n| Opus 5.5 | 8.83 | 8.67 | 8.5 | 8.5 | 8.67 |\n\nJudge model: claude-sonnet-5-5, one call, solutions anonymised and shuffled. Per-task pick: a_free_slots -> Opus 5.5 run 2, b_invoice_bugfix -> Fable 5.2 run 2, c_ttl_cache -> Opus 5.5 run 1"
+}

@@ -1,0 +1,50 @@
+{
+  "a_free_slots:S1": {
+    "model": "claude-fable-5-2",
+    "run": 2
+  },
+  "a_free_slots:S2": {
+    "model": "claude-fable-5-2",
+    "run": 1
+  },
+  "a_free_slots:S3": {
+    "model": "claude-opus-5-5",
+    "run": 2
+  },
+  "a_free_slots:S4": {
+    "model": "claude-opus-5-5",
+    "run": 1
+  },
+  "b_invoice_bugfix:S1": {
+    "model": "claude-fable-5-2",
+    "run": 1
+  },
+  "b_invoice_bugfix:S2": {
+    "model": "claude-fable-5-2",
+    "run": 2
+  },
+  "b_invoice_bugfix:S3": {
+    "model": "claude-opus-5-5",
+    "run": 1
+  },
+  "b_invoice_bugfix:S4": {
+    "model": "claude-opus-5-5",
+    "run": 2
+  },
+  "c_ttl_cache:S1": {
+    "model": "claude-opus-5-5",
+    "run": 2
+  },
+  "c_ttl_cache:S2": {
+    "model": "claude-fable-5-2",
+    "run": 2
+  },
+  "c_ttl_cache:S3": {
+    "model": "claude-fable-5-2",
+    "run": 1
+  },
+  "c_ttl_cache:S4": {
+    "model": "claude-opus-5-5",
+    "run": 1
+  }
+}
